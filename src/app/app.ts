@@ -18,12 +18,12 @@ export class App {
   bindingMess = '';
   isDisable = false;
   thisMessage='';
-  products = [
-    {name:'Sampa OG', price : 4000000,image:'src\assets\images\samba.jpg'},
-    {name:'Nike', price : 45000000,image:'src\assets\images\samba.jpg'},
-    {name:'Tuyên', price : 7000000,image:'src\assets\images\samba.jpg'},
-    {name:'MVP', price : 9000000,image:'src\assets\images\samba.jpg'}
-  ];
+products = [
+  { name: 'Sampa OG', price: 4000000, image: '/assets/images/samba.jpg' },
+  { name: 'Nike',     price: 45000000, image: '/assets/images/samba.jpg' },
+  { name: 'Tuyên',    price: 7000000, image: '/assets/images/samba.jpg' },
+  { name: 'MVP',      price: 9000000, image: '/assets/images/samba.jpg' }
+];
   handleClickme() {
     this.thisMessage = 'Hello everyone';
   }
