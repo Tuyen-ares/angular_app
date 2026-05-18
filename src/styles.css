@@ -1,6 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+
+/* Page root class used by the app */
+.main {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Global H1 style (matches screenshot) */
+h1 {
+  padding: 3rem 0;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Primary button style shown in screenshot */
+.btn-main {
+  background-image: linear-gradient(to right, #d434b0, #8041f7);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
 }
