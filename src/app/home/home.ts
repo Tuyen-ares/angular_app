@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { FormsModule, NgForm } from '@angular/forms';
-import { CurrencyPipe } from '../shared/header-layout/Pipes/CurrencyPipe.pipe';
-import { UpperCasePipe } from '../shared/header-layout/Pipes/UpperCasePipe';
-import { CommonModule } from '@angular/common';
+import { ProductItem } from '../shared/Product-item/product.item';
+// import { FormsModule, NgForm } from '@angular/forms';
+// import { CurrencyPipe } from '../shared/header-layout/Pipes/CurrencyPipe.pipe';
+// import { UpperCasePipe } from '../shared/header-layout/Pipes/UpperCasePipe';
+// import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet,FormsModule,CurrencyPipe,UpperCasePipe,CommonModule,RouterLink],
+  imports:    [RouterOutlet,ProductItem],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
