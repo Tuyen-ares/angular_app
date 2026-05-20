@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute , RouterLink, RouterOutlet} from '@angular/router';
 import { CurrencyPipe } from '../header-layout/Pipes/CurrencyPipe.pipe';
@@ -15,6 +15,12 @@ import { Input } from '@angular/core';
 })
 export class ProductItem {
   @Input() products : ProductItems[] = [];
+
+  @Output() dataEvent = new EventEmitter<string>();
+
+  handleDelete(id: string) {
+    this.dataEvent.emit(id);
+  }
 }
 
 

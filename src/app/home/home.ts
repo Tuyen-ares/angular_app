@@ -18,6 +18,13 @@ export class Home {
   bindingMess = '';
   isDisable = false;
   thisMessage='';
+
+  handleDelete = (id: string)=> {
+    const index = this.products.findIndex(item=> item.id == id);
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
+  }
 products = [
   { id:'1', name: 'Sampa OG', price: 4000000, image: '/assets/images/samba.jpg' },
   { id:'2', name: 'Nike',     price: 45000000, image: '/assets/images/samba.jpg' },
