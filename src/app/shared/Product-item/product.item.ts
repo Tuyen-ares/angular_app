@@ -18,6 +18,9 @@ export class ProductItem {
 
   @Output() dataEvent = new EventEmitter<string>();
 
+  get totalPrice() : number {
+    return this.products.reduce((total, item) => total + item.price, 0);
+  }
   handleDelete(id: string) {
     this.dataEvent.emit(id);
   }
