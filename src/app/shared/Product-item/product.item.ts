@@ -23,6 +23,10 @@ export class ProductItem implements OnChanges{
     console.log(changes['products'].currentValue);
     console.log(changes['products'].previousValue);
   }
+
+  ngOnDestroy(): void {
+    console.log('product item component destroyed');
+  }
   get totalPrice() : number {
     return this.products.reduce((total, item) => total + item.price, 0);
   }

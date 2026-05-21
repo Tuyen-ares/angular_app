@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { ProductItem } from '../shared/Product-item/product.item';
 // import { FormsModule, NgForm } from '@angular/forms';
 // import { CurrencyPipe } from '../shared/header-layout/Pipes/CurrencyPipe.pipe';
@@ -8,7 +9,7 @@ import { ProductItem } from '../shared/Product-item/product.item';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports:    [RouterOutlet,ProductItem],
+  imports: [RouterOutlet, ProductItem, CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -16,7 +17,7 @@ export class Home {
   //protected readonly title = signal('angular-basic-project');
   nameBtn = 'Click me button';
   bindingMess = '';
-  isDisable = false;
+  isDisable = true;
   thisMessage='';
 
   handleDelete = (id: string)=> {
@@ -45,6 +46,8 @@ ngOnInit():void {
   handleClickme() {
     this.thisMessage = 'Hello everyone';
   }
-
+handleChangeVisible() {
+  this.isDisable = false;
+}
 
 }
