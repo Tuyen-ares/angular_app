@@ -31,6 +31,13 @@ products = [
   { id:'3', name: 'Tuyên',    price: 7000000, image: '/assets/images/samba.jpg' },
   { id:'4', name: 'MVP',      price: 9000000, image: '/assets/images/samba.jpg' }
 ];
+ 
+constructor() {
+  console.log('Home component created');
+}
+ngOnInit():void {
+  console.log('Home component initialized');
+}
   handleClickme() {
     this.thisMessage = 'Hello everyone';
   }
