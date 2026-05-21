@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { Component, EventEmitter, OnChanges, Output, signal, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute , RouterLink, RouterOutlet} from '@angular/router';
 import { CurrencyPipe } from '../header-layout/Pipes/CurrencyPipe.pipe';
@@ -13,11 +13,16 @@ import { Input } from '@angular/core';
   templateUrl: './product.item.html',
   styleUrl: './product.item.css'
 })
-export class ProductItem {
+export class ProductItem implements OnChanges{
+ 
   @Input() products : ProductItems[] = [];
 
   @Output() dataEvent = new EventEmitter<string>();
 
+  ngOnChanges(changes : SimpleChanges): void {
+    console.log(changes['products'].currentValue);
+    console.log(changes['products'].previousValue);
+  }
   get totalPrice() : number {
     return this.products.reduce((total, item) => total + item.price, 0);
   }

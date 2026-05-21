@@ -24,6 +24,7 @@ export class Home {
     if (index !== -1) {
       this.products.splice(index, 1);
     }
+    this.products = this.products.filter(item=> item.id !== id);
   }
 products = [
   { id:'1', name: 'Sampa OG', price: 4000000, image: '/assets/images/samba.jpg' },
@@ -38,6 +39,9 @@ constructor() {
 ngOnInit():void {
   console.log('Home component initialized');
 }
+// ngDoCheck(): void {
+//   console.log('check component');
+// }
   handleClickme() {
     this.thisMessage = 'Hello everyone';
   }
